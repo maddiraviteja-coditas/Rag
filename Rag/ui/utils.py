@@ -45,7 +45,7 @@ class LoadData:
         for attribute in url_query_attributes:
             dict_attributes = attribute.split("=")
             url_attributes_dict[dict_attributes[0]] = dict_attributes[1] 
-        json_text = YouTubeTranscriptApi.get_transcript("tIeHLnjs5U8")
+        json_text = YouTubeTranscriptApi.get_transcript(url_attributes_dict["v"])
         text = ""
         for dict in json_text:
             text += dict["text"]
